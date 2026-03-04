@@ -13,4 +13,6 @@ locals {
     },
     local.common_tags
   )
+
+  vpc_id = var.vpc_id
 }
