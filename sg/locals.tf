@@ -14,5 +14,5 @@ locals {
     local.common_tags
   )
 
-  vpc_id = var.vpc_id
+  vpc_id = data.aws_ssm_parameter.vpc_id.value
 }
