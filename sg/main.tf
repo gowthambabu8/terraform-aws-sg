@@ -1,5 +1,5 @@
 resource "aws_security_group" "main" {
-  name = var.sg_name
+  name = replace("${var.project}-${var.environment}-${var.sg_name}","_","-")
   description = var.sg_desc
   vpc_id = local.vpc_id
   tags = local.sg_final_tags
